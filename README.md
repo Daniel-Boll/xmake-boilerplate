@@ -2,6 +2,11 @@
 
 This is a boilerplate for xmake projects.
 
+## Enhancements
+
+- [] Create a pre-commit to generate CMakeLists
+  - `xmake project -k cmake`
+
 ## Usage
 
 ```bash
