@@ -1,3 +1,7 @@
+set_project("sample")
+set_version("1.0.0")
+set_xmakever("2.7.0")
+
 set_languages("c++20")
 add_rules("mode.debug", "mode.release")
 
@@ -8,7 +12,7 @@ add_requires(table.unpack(libs))
 
 target("sample-project-lib")
   set_kind("static")
-  add_files("source/**/*.cpp")
+  add_files("src/**/*.cpp")
   add_packages(table.unpack(libs))
 
 target("sample-project")
@@ -22,3 +26,5 @@ target("test")
   add_files("test/*.cpp")
   add_packages(table.unpack(libs))
   add_deps("sample-project-lib")
+
+add_installfiles("(include/**)", {prefixdir = ""})
